@@ -73,6 +73,11 @@ public class CargarDatos extends javax.swing.JFrame {
         btnLimpiar.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         btnLimpiar.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\3792081-broom-halloween-magic-witch_109049.png")); // NOI18N
         btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
 
         btnGuardar.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         btnGuardar.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\diskette_save_saveas_1514.png")); // NOI18N
@@ -107,9 +112,8 @@ public class CargarDatos extends javax.swing.JFrame {
                             .addComponent(txtColor)
                             .addComponent(txtNombreDuenio)
                             .addComponent(txtCelularDuenio)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(cmbAtencionEspecial, javax.swing.GroupLayout.Alignment.LEADING, 0, 87, Short.MAX_VALUE)
-                                .addComponent(cmbAlergico, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(cmbAtencionEspecial, 0, 87, Short.MAX_VALUE)
+                            .addComponent(cmbAlergico, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -155,9 +159,9 @@ public class CargarDatos extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(txtObservaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39))
         );
 
@@ -206,6 +210,19 @@ public class CargarDatos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+       txtNombre.setText("");
+       txtCelularDuenio.setText("");
+       txtColor.setText("");
+       txtRaza.setText("");
+       txtNombreDuenio.setText("");
+       txtObservaciones.setText("");
+       
+       cmbAlergico.setSelectedIndex(0);
+       cmbAtencionEspecial.setSelectedIndex(0);
+       
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**
      * @param args the command line arguments

@@ -108,10 +108,8 @@
                                   <Component id="txtColor" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtNombreDuenio" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtCelularDuenio" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="cmbAtencionEspecial" alignment="0" pref="87" max="32767" attributes="0"/>
-                                      <Component id="cmbAlergico" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="cmbAtencionEspecial" alignment="0" pref="87" max="32767" attributes="0"/>
+                                  <Component id="cmbAlergico" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
@@ -172,9 +170,9 @@
                           <Component id="txtObservaciones" pref="107" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnLimpiar" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btnGuardar" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="btnLimpiar" min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   </Group>
@@ -232,6 +230,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Limpiar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnGuardar">
               <Properties>
