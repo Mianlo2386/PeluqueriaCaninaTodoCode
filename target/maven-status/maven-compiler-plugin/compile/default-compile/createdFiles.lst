@@ -1,4 +1,11 @@
+com\mianlodev\peluqueriacanina\logica\Controladora.class
+com\mianlodev\peluqueriacanina\igu\CargarDatos$1.class
 com\mianlodev\peluqueriacanina\igu\Principal.class
+com\mianlodev\peluqueriacanina\logica\Duenio.class
+com\mianlodev\peluqueriacanina\PeluqueriaCanina.class
+com\mianlodev\peluqueriacanina\logica\Duenio_.class
+com\mianlodev\peluqueriacanina\persistencia\ControladoraPersistencia.class
+com\mianlodev\peluqueriacanina\logica\Mascota.class
+com\mianlodev\peluqueriacanina\logica\Mascota_.class
 com\mianlodev\peluqueriacanina\igu\Principal$1.class
 com\mianlodev\peluqueriacanina\igu\CargarDatos.class
-com\mianlodev\peluqueriacanina\PeluqueriaCanina.class
