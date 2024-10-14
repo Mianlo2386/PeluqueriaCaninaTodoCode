@@ -1,19 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.mianlodev.peluqueriacanina.igu;
 
-/**
- *
- * @author User
- */
+import com.mianlodev.peluqueriacanina.logica.Controladora;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+
 public class CargarDatos extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CargarDatos
-     */
+    Controladora control = new Controladora();
+    
     public CargarDatos() {
+        
+        //control = new Controladora();
         initComponents();
     }
 
@@ -82,6 +79,11 @@ public class CargarDatos extends javax.swing.JFrame {
         btnGuardar.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         btnGuardar.setIcon(new javax.swing.ImageIcon("C:\\Users\\User\\Downloads\\diskette_save_saveas_1514.png")); // NOI18N
         btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         cmbAlergico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "SI", "No" }));
 
@@ -223,6 +225,29 @@ public class CargarDatos extends javax.swing.JFrame {
        cmbAtencionEspecial.setSelectedIndex(0);
        
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+       
+        String nombreMasco = txtNombre.getText();
+        String raza = txtRaza.getText();
+        String color = txtColor.getText();
+        String observaciones = txtObservaciones.getText();
+        String nombreDuenio = txtNombreDuenio.getText();
+        String celularDuenio = txtCelularDuenio.getText();
+        
+        String alergico = (String) cmbAlergico.getSelectedItem();
+        String atencionEspecial = (String) cmbAtencionEspecial.getSelectedItem();
+        
+        
+        control.guardar(nombreMasco, raza, color, observaciones,
+                nombreDuenio, celularDuenio, alergico, atencionEspecial);
+        
+        JOptionPane optionPane = new JOptionPane("Se guardó correctamente!");
+        optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        JDialog dialog = optionPane.createDialog("Guardado Exitoso");
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
     /**
      * @param args the command line arguments

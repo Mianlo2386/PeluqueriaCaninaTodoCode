@@ -36,6 +36,14 @@ public class Mascota {
         this.duenio = duenio;
     }
 
+    public Duenio getDuenio() {
+        return duenio;
+    }
+
+    public void setDuenio(Duenio duenio) {
+        this.duenio = duenio;
+    }
+
     public int getNumCliente() {
         return numCliente;
     }
